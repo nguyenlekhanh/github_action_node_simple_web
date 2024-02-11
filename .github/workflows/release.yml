@@ -12,5 +12,5 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: docker build . -t khanh811/simple-node-app
-    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password stdin
+    - run: echo "${{secrets.DOCKERHUB_PASSWORD}}" | docker login -u ${{secrets.DOCKERHUB_USERNAME}} --password-stdin
     - run: docker push khanh811/simple-node-app
